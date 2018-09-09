@@ -5,14 +5,13 @@ public class CH02_Grade_Converter {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
+		System.out.println("Welcome to the Grade Converter");
+		System.out.println();
+
 		String choice = "y";
-		
-		
+				
 		while (choice.equalsIgnoreCase("y")) {
-		
-			System.out.println("Welcome to the Grade Converter");
-			System.out.println();
-			
+	
 			System.out.print("Enter numerical grade: ");
 			int grade = sc.nextInt();
 			
