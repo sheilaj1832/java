@@ -12,17 +12,10 @@ public class student_registration {
 		Scanner sc = new Scanner(System.in);
 
 		// display operational messages
-		System.out.print("Enter First Name: ");
-		String firstName = sc.next();
-		System.out.print("Enter Last Name: ");
-		String lastName = sc.next();
-		System.out.print("Enter year of birth: ");
-		String birthYear = sc.next();
-
-		System.out.println("Welcome " + firstName + " " + lastName + "!");
-		System.out.println("Your registration is complete.");
-		System.out.println("Your temporary password is: " + firstName + "*" + birthYear);
-
+		
+		double x = Math.random() * 10 + 100;
+		System.out.println(x);
+		
 		System.out.println(); // print a blank line
 		sc.close();
 	}
