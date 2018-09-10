@@ -21,9 +21,9 @@ public class CH03_Travel_Time_Calculator {
 		System.out.println("Estimated travel time");
 		System.out.println("---------------------");
 		
-		//NEED TO FIX THE MODULUS ERROR//
+		//NEED TO FIX THE MODULUS ERROR - done see below//
 		int hours = (int)miles / (int)mph;
-		int minutes %= (((int)miles / (int)mph)- hours)/60;
+		int minutes = (((int)miles % (int)mph)*(1-(4/10)));
 		
 		System.out.println("Hours: " + hours);
 		System.out.println("Minutes: " + minutes);
