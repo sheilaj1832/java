@@ -7,11 +7,10 @@ public class BoardGame extends Toy{
 		super(id, code, price);
 		this.name = name;
 		this.pieces = pieces;
-		
-		public BoardGame () {
-		}
-		}
 	}
+	public BoardGame () {
+		}
+}
 	public String getName() {
 		return name;
 	}

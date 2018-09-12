@@ -19,7 +19,8 @@ public class GradeConverterApp {
 			
 			choice = Console.getString("Continue y/n? ");
 		}
-		
+		choice = Console.getString("Continue y/n? ");
+
 		System.out.println("Bye!");
 	}
 
