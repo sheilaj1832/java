@@ -1,5 +1,5 @@
 
-public class Console {
+public class Console extends ContactList{
 
 	import java.util.Scanner;
 	    
@@ -36,8 +36,6 @@ public class Console {
 	        }
 	       }
 	        return s;
-
-		choice = Console.getString("Continue y/n? ");
 	
 	System.out.println("Bye!");
 	}
