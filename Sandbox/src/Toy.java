@@ -12,6 +12,10 @@ public class Toy {
 		this.code = code;
 		this.price = price;
 	}
+	
+	public Toy () {
+	}
+	
 	public int getId() {
 		return id;
 	}
