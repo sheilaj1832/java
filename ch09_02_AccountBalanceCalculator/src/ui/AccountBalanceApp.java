@@ -43,14 +43,17 @@ public class AccountBalanceApp {
 		}
 		sa.applyInterestPayment();
 		ca.deductMonthlyFee();
+		System.out.println();
 		System.out.println("Monthly Payments and fees:");
 		System.out.println("Checking Fee: " + cf.format(ca.getMonthlyFee()));
 		System.out.print("Monthly Interest Payment: " + cf.format(sa.getMonthlyInterestPayment()));
 		System.out.println();
 
+		System.out.println();
 		System.out.println("Final Balances");
 		System.out.println("Checking: " + cf.format(ca.getBalance()));
 		System.out.println("Savings: " + cf.format(sa.getBalance()));
+		System.out.println();
 
 		System.out.println("Bye!");
 	}
