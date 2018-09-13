@@ -11,11 +11,11 @@ public class ArrayDemoApp {
 //			sum += prices[i];
 //			System.out.println("Subtotal = "+sum);
 //		}
-// or this plan using a for loop
+//      or this plan using a for loop
 		for (double price : prices) {
 			System.out.println(price);
 			System.out.println("Subtotal = "+sum);
 		System.out.println("bye");	
 		}
 	}
-
+}
