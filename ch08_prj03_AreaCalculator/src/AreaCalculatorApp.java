@@ -34,7 +34,6 @@ public class AreaCalculatorApp {
 		
 		choice = Console.getString("Continue (y/n)? ");
 	}
-
 	}
 
 }
