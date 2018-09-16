@@ -2,11 +2,22 @@
 
 public abstract class Animal implements Countable {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	int counter;
 
-		
-		//Count
+	public int getCounter() {
+		return counter;
 	}
 
+	public void setCounter(int counter) {
+		this.counter = counter;
+	}
+
+	@Override
+	public String toString() {
+		return "Animal [counter=" + counter + "]";
+	}
+	
+		
+		
+	
 }

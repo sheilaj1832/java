@@ -6,5 +6,4 @@ public interface Countable {
 	int getCount();
 	String getCountString();
 	
-
 }

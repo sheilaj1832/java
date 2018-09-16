@@ -3,7 +3,7 @@ package ui;
 import business.Account;
 import util.Console;
 
-public class BattingStatistics {
+public class BattingStatisticsApp {
 
 	public static void main(String[] args) {
 
