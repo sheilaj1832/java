@@ -1,5 +1,4 @@
 
-
 public abstract class Animal implements Countable {
 
 	int counter;
@@ -10,14 +9,7 @@ public abstract class Animal implements Countable {
 
 	public void setCounter(int counter) {
 		this.counter = counter;
+	
 	}
 
-	@Override
-	public String toString() {
-		return "Animal [counter=" + counter + "]";
-	}
-	
-		
-		
-	
 }

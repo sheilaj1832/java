@@ -1,13 +1,13 @@
 
 public class Alligator extends Animal {
-	
+
 	public Alligator() {
 	}
-	
+
 	@Override
 	public void incrementCount() {
-		setCounter(getCount()+1);
-		
+		setCounter(getCount() + 1);
+
 	}
 
 	@Override
