@@ -29,6 +29,9 @@ public class ch14_DateTimeApp {
 		
 		DateTimeFormatter dtf = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM);
 		System.out.println(dtf.format(thanksgiving));
+		
+		
 	}
 
 }
+
