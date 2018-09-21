@@ -1,1 +1,4 @@
-France
+1	USA	United States of America
+2	CAN	Canada
+3	FRA	France
+4	THA	Thailand

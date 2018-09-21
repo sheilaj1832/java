@@ -11,7 +11,7 @@ public class DiceRollerApp {
 	while (choice.equalsIgnoreCase("y"))	{
 		// new instance will roll the dice
 		Dice d = new Dice();
-		//Dice toSrig will return the result of the roll
+		//Dice toString will return the result of the roll
 		System.out.println(d);
 		
 		System.out.print("Roll again (y/n)? ");
