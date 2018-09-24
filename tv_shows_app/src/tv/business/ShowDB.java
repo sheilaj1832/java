@@ -4,17 +4,16 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import tv.util.DBUtil;
+import util.DBUtil;
 
 public class ShowDB implements ShowDAO {
-	
+
 	@Override
 	public List<Show> get(String genre) {
 		String sql = "SELECT * from tvshow where genre = ?";
 		List<Show> shows = new ArrayList<>();
 		Show s = null;
-		try (Connection connection = DBUtil.getConnection();
-				PreparedStatement ps = connection.prepareStatement(sql);) {
+		try (Connection connection = DBUtil.getConnection(); PreparedStatement ps = connection.prepareStatement(sql);) {
 			ps.setString(1, genre);
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
@@ -25,10 +24,10 @@ public class ShowDB implements ShowDAO {
 				String g = rs.getString(5);
 				String network = rs.getString(6);
 				s = new Show(id, name, rating, length, g, network);
-				
+
 				shows.add(s);
 			}
-			
+
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -41,8 +40,7 @@ public class ShowDB implements ShowDAO {
 		String sql = "SELECT * from tvshow where length = ?";
 		List<Show> shows = new ArrayList<>();
 		Show s = null;
-		try (Connection connection = DBUtil.getConnection();
-				PreparedStatement ps = connection.prepareStatement(sql);) {
+		try (Connection connection = DBUtil.getConnection(); PreparedStatement ps = connection.prepareStatement(sql);) {
 			ps.setInt(1, length);
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
@@ -53,10 +51,10 @@ public class ShowDB implements ShowDAO {
 				String genre = rs.getString(5);
 				String network = rs.getString(6);
 				s = new Show(id, name, rating, l, genre, network);
-				
+
 				shows.add(s);
 			}
-			
+
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -69,8 +67,8 @@ public class ShowDB implements ShowDAO {
 		String sql = "SELECT * FROM  tvshow";
 		List<Show> shows = new ArrayList<>();
 		try (Connection connection = DBUtil.getConnection();
-			PreparedStatement ps = connection.prepareStatement(sql);
-			ResultSet rs = ps.executeQuery()) {
+				PreparedStatement ps = connection.prepareStatement(sql);
+				ResultSet rs = ps.executeQuery()) {
 			while (rs.next()) {
 				int id = rs.getInt(1);
 				String name = rs.getString(2);
@@ -79,11 +77,10 @@ public class ShowDB implements ShowDAO {
 				String genre = rs.getString(5);
 				String network = rs.getString(6);
 				Show s = new Show(id, name, rating, length, genre, network);
-				
+
 				shows.add(s);
 			}
-		} 
-		catch (SQLException e) {
+		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 		return shows;
@@ -91,8 +88,20 @@ public class ShowDB implements ShowDAO {
 
 	@Override
 	public boolean add(Show s) {
-		System.out.println("Not yet implemented!");
-		return false;
+		String sql = "INSERT INTO tvshow (Name, Rating, Length, Genre, Network) " + "VALUES (?, ?, ?, ?, ?)";
+		try (Connection connection = DBUtil.getConnection(); PreparedStatement ps = connection.prepareStatement(sql)) {
+			ps.setString(1, s.getName());
+			ps.setString(2, s.getRating());
+			ps.setInt(3, s.getLength());
+			ps.setString(4, s.getGenre());
+			ps.setString(5, s.getNetwork());
+			ps.executeUpdate();
+			return true;
+			
+		} catch (SQLException e) {
+			System.err.println(e);
+			return false;
+		}
 	}
 
 	@Override
@@ -106,5 +115,4 @@ public class ShowDB implements ShowDAO {
 		System.out.println("Not yet implemented!");
 		return false;
 	}
-
 }

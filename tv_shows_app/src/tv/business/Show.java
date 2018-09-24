@@ -9,6 +9,15 @@ public class Show {
 	private String genre;
 	private String network;
 	
+	public Show(String name, String rating, int length, String genre, String network) {
+		super();
+		this.name = name;
+		this.rating = rating;
+		this.length = length;
+		this.genre = genre;
+		this.network = network;
+	}
+
 	public Show(int id, String name, String rating, int length, String genre, String network) {
 		super();
 		this.id = id;
