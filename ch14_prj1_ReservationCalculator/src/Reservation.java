@@ -42,9 +42,7 @@ public class Reservation {
 		this.departureDate = departureDateFormatted;
 	}
 
-	// Need to set up an if statement on 1 night or 2 or more nights for the
-	// display.
-	// Set up number of days calculation
+	// Set up number of nights calculation
 	public long getNumberOfNights() {
 		long numberOfNights = ChronoUnit.DAYS.between(arrivalDate, departureDate);
 		return numberOfNights;
