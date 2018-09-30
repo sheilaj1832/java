@@ -20,6 +20,7 @@ public class TVShowApp {
 			if (command.equals("1")) {
 				List<Show> shows = showDB.getAll();
 				for (Show s : shows) {
+					System.out.println(s);
 				}
 			}
 			else if (command.equals("2")) {

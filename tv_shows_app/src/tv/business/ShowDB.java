@@ -4,7 +4,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import util.DBUtil;
+import tv.util.DBUtil;
 
 public class ShowDB implements ShowDAO {
 
