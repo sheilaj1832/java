@@ -10,18 +10,16 @@ public class GradeConverterApp {
 		
 		while (choice.equalsIgnoreCase("y")) {
 			
-			// prompt user for numueric grade
+			// prompt user for numeric grade
 			int grade = Console.getInt("Enter numerical grade: ", -1, 101);
 			Grade g = new Grade(grade);
 			
 			// display the letter grade
 			System.out.println("Letter grade: "+g.getLetter());
 			
-			choice = Console.getString("Continue y/n? ");
-		}
-		choice = Console.getString("Continue y/n? ");
-
-		System.out.println("Bye!");
+			choice = Console.getString("Continue y/n? ", "y", "n");
+			
+		System.out.println();
 	}
-
+	}
 }
